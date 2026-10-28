@@ -1,8 +1,11 @@
-name: Tests
+name: Calculator CI
 
 on:
   push:
   pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   tests:
@@ -17,3 +20,13 @@ jobs:
 
       - name: Run tests
         run: python -m unittest -v
+
+      - name: Generate documentation
+        run: python -m pydoc -w main
+
+      - name: Save documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation
+          path: main.html
+          if-no-files-found: error
