@@ -2,7 +2,7 @@
 
 
 def add(a, b):
-    """Return the sum of two numbers."""
+"""Add two numbers. Example: 2 + 3 = 5."""
     return a + b
 
 
