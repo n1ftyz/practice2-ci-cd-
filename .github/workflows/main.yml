@@ -24,4 +24,4 @@ jobs:
         run: python -m unittest -v test_main.TestCalculator.test_add
 
       - name: Test subtraction
-        run: python -m unittest -v test_main.TestCalculator.test_subtractыыыыыыыы
+        run: python -m unittest -v test_main.TestCalculator.test_subtract
